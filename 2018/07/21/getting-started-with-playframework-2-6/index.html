@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>Getting started with Playframework 2.6.x | developerz-one</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="playframework,java" />
+    
+    <meta name="description" content="Rapid development, ready to market or at least quick to market, highly scalable is current development standard and playframework resonate this very accurately.  Playframework started as simple projec">
+<meta name="keywords" content="playframework,java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting started with Playframework 2.6.x">
+<meta property="og:url" content="https://developerz-one.github.io/2018/07/21/getting-started-with-playframework-2-6/index.html">
+<meta property="og:site_name" content="developerz-one">
+<meta property="og:description" content="Rapid development, ready to market or at least quick to market, highly scalable is current development standard and playframework resonate this very accurately.  Playframework started as simple projec">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://developerz-one.github.io/2018/07/21/getting-started-with-playframework-2-6/welcome-play.jpg">
+<meta property="og:updated_time" content="2018-07-21T12:33:35.767Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Getting started with Playframework 2.6.x">
+<meta name="twitter:description" content="Rapid development, ready to market or at least quick to market, highly scalable is current development standard and playframework resonate this very accurately.  Playframework started as simple projec">
+<meta name="twitter:image" content="https://developerz-one.github.io/2018/07/21/getting-started-with-playframework-2-6/welcome-play.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.2.4/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Playframework/">Playframework</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Playframework/Java/">Java</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/akka">AKKA</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/lagom">Lagom</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/solr">Solr</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/endeca">Endeca</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Playframework/">Playframework</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Playframework/Java/">Java</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-getting-started-with-playframework-2-6" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Getting started with Playframework 2.6.x
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/07/21/getting-started-with-playframework-2-6/" class="article-date">
+            <time datetime="2018-07-21T12:31:26.000Z" itemprop="datePublished">2018-07-21</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/java/">java</a>, <a class="tag-link" href="/tags/playframework/">playframework</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>Rapid development, ready to market or at least quick to market, highly scalable is current development standard and playframework resonate this very accurately. </p>
+<p>Playframework started as simple project where basic need was to provide route based concurrent and non-blocking and asynchronous request processing approach to access web application. </p>
+<p>And most important of all  “Play is <a href="https://www.reactivemanifesto.org/" target="_blank" rel="noopener">reactive</a>“. That means it follows</p>
+<ul>
+<li>Responsive</li>
+<li>Resilient</li>
+<li>Elastic</li>
+<li>Message Driven</li>
+</ul>
+<p>Above basic background of Playframework is enough for getting started. Let’s begin hands-on:</p>
+<p>In this beginners guide we are going to start with simple hello world application in Playframework using Java.</p>
+<img src="/2018/07/21/getting-started-with-playframework-2-6/welcome-play.jpg">
+<h3 id="Setting-up-environment"><a href="#Setting-up-environment" class="headerlink" title="Setting up environment:"></a>Setting up environment:</h3><ul>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">JDK 8+</a></li>
+<li>IDE (<a href="http://scala-ide.org/download/sdk.html" target="_blank" rel="noopener">Eclipse with SBT</a>, <a href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank" rel="noopener">Intellij</a> or whatever you prefer)</li>
+<li><a href="https://www.scala-sbt.org/download.html" target="_blank" rel="noopener">SBT</a> (<strong>S</strong>imple <strong>B</strong>uild <strong>T</strong>ool)</li>
+<li><a href="https://www.scala-lang.org/download/" target="_blank" rel="noopener">Scala</a></li>
+</ul>
+<p>You can get plenty of online articals of installing above software on your system. </p>
+<h3 id="Creating-new-play-application-from-sample-project"><a href="#Creating-new-play-application-from-sample-project" class="headerlink" title="Creating new play application from sample project:"></a>Creating new play application from sample project:</h3><p>One simple way to get started with Play project is generating it using sbt<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbt new playframework/play-java-seed.g8</span><br></pre></td></tr></table></figure></p>
+<img src="/2018/07/21/getting-started-with-playframework-2-6/play-calculator.gif">
+<h3 id="Running-play-application"><a href="#Running-play-application" class="headerlink" title="Running play application:"></a>Running play application:</h3><p>SBT has made development process very easy by provide lot of build commands in built. With few commands your application will be up and running in no time. We will be using run command parameter with sbt to start our play application.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; sbt run</span><br></pre></td></tr></table></figure></p>
+<p>Once sbt run, you can visit page on<br><a href="http://localhost:9000/" target="_blank" rel="noopener">http://localhost:9000/</a></p>
+<img src="/2018/07/21/getting-started-with-playframework-2-6/sbt-run.gif">
+<p>To stop the server, go to command prompt  and just press <em>ENTER</em> </p>
+<p><strong>NOTE: When running for first time, it will take time to download all dependancies. So be patient!!!</strong></p>
+<p>Here, run cammand will internally compile your source code and make it available for execution. If you want to compile it specificaly, you can do it by providing clean and compile as two parameter to sbt. For example as below:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbt clean compile</span><br></pre></td></tr></table></figure>
+<img src="/2018/07/21/getting-started-with-playframework-2-6/sbt-clean-compile.gif">
+<blockquote>
+<p>Want to know more about <a href="https://www.scala-sbt.org/1.x/docs/Command-Line-Reference.html" target="_blank" rel="noopener">SBT</a>?</p>
+</blockquote>
+<h3 id="Importing-play-application-in-Intellij-IDE"><a href="#Importing-play-application-in-Intellij-IDE" class="headerlink" title="Importing play application in Intellij IDE:"></a>Importing play application in Intellij IDE:</h3><p>To start with hand’s on development with play, let’s import it in Intellij</p>
+<h4 id="Importing-for-first-project-in-Intellij"><a href="#Importing-for-first-project-in-Intellij" class="headerlink" title="Importing for first project in Intellij?"></a>Importing for first project in Intellij?</h4><img src="/2018/07/21/getting-started-with-playframework-2-6/intellij-first-import.gif">
+<h4 id="Already-Intellij-pro"><a href="#Already-Intellij-pro" class="headerlink" title="Already Intellij pro???"></a>Already Intellij pro???</h4><img src="/2018/07/21/getting-started-with-playframework-2-6/intellij-import.png">
+<h2 id="Exploring-and-customizing-the-base-project"><a href="#Exploring-and-customizing-the-base-project" class="headerlink" title="Exploring and customizing the base project"></a>Exploring and customizing the base project</h2><p>Hmm.. now we are getting somewhere…<br>For simplicity, we will be focussing on four files in this project:</p>
+<ol>
+<li>build.sbt</li>
+<li>routes</li>
+<li>MyController.java</li>
+<li>index.scala.html</li>
+</ol>
+<ul>
+<li><p><strong>build.sbt</strong> in <em>sbt</em> is what <strong><em>pom.xml to maven</em></strong>. This file will contain the dependency definition and build instructions (such as compile/package/deploy stuff). This file you will be modifying mostly only for updating libraries dependancies.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">   name := <span class="string">""</span><span class="string">"play-calculator"</span><span class="string">""</span>  </span><br><span class="line">organization := <span class="string">"com.calc"</span>  </span><br><span class="line">version := <span class="string">"1.0-SNAPSHOT"</span>  </span><br><span class="line"><span class="keyword">lazy</span> <span class="keyword">val</span> root = (project in file(<span class="string">"."</span>)).enablePlugins(<span class="type">PlayJava</span>)  </span><br><span class="line">scalaVersion := <span class="string">"2.12.4"</span>  </span><br><span class="line">libraryDependencies += guice</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>routes</strong> is cool part of Playframework!! Here you provide URI paths which will be used by end user to access your application. This routes links to the controller which will have your custom logic to do anything.. For me it just says <strong><em>Hi programmer</em></strong> to me!!!</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># An example controller showing a sample home page  </span><br><span class="line">GET     /          controllers.MyController.hello</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>MyController.java</strong> is simple controller created for this demo. To create we just simple extend <em>play.mvc.Controller</em> and create hello method.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> controllers;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">import</span> play.mvc.Controller;  </span><br><span class="line"><span class="keyword">import</span> play.mvc.Result;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyController</span> <span class="keyword">extends</span> <span class="title">Controller</span> </span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Result <span class="title">hello</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> ok(<span class="string">"&lt;b&gt;&lt;i&gt;Hi programmer&lt;/i&gt;&lt;/b&gt;"</span>).as(<span class="string">"text/html"</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>index.scala.html</strong> is used as view for the response rendering by Play. In this you will be inlcuding static resource requird, such as CSS, JS. Playframework uses <a href="https://www.playframework.com/documentation/2.6.x/JavaTemplates" target="_blank" rel="noopener">Twirl template engine</a> to access dynamic variable returned from Controller. In this example we will skip this for now. But we will be covering handson for this in upcoming post.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@()  </span><br><span class="line"><span class="meta">@main</span>(<span class="string">"Welcome to Play"</span>) &#123;  </span><br><span class="line">  &lt;h1&gt;<span class="type">Welcome</span> to <span class="type">Play</span>!&lt;/h1&gt;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Now its time for action!!!<br><img src="/2018/07/21/getting-started-with-playframework-2-6/play-hi-programmer.gif"></p>
+<h3 id="Soon-to-upload-video-covering-all-above-steps"><a href="#Soon-to-upload-video-covering-all-above-steps" class="headerlink" title="Soon to upload video covering all above steps!"></a>Soon to upload video covering all above steps!</h3>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://developerz-one.github.io/2018/07/21/getting-started-with-playframework-2-6/" data-id="cjjveayg10000qgtt8v5m7oq2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://developerz-one.github.io" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/21/getting-started-with-playframework-2-6/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/07/21/getting-started-with-playframework-2-6/welcome-play.jpg)" alt="Getting started with Playframework 2.6.x" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Playframework/">Playframework</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Playframework/Java/">Java</a></p>
+                            <p class="item-title"><a href="/2018/07/21/getting-started-with-playframework-2-6/" class="title">Getting started with Playframework 2.6.x</a></p>
+                            <p class="item-date"><time datetime="2018-07-21T12:31:26.000Z" itemprop="datePublished">2018-07-21</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Playframework/">Playframework</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Playframework/Java/">Java</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/playframework/">playframework</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/playframework/" style="font-size: 10px;">playframework</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://developerz-one.github.io/">Github</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <p>&copy; 2018 Pravin Chikhale</p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
